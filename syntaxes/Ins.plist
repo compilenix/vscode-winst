@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>scopeName</key>
+	<string>source.ins</string>
+
+	<key>uuid</key>
+	<string>1d16411c-99e4-4621-8b81-688a1a448ea9</string>
+
+	<key>fileTypes</key>
+	<array>
+		<string>ins</string>
+		<string>winst</string>
+	</array>
+
+	<key>keyEquivalent</key>
+	<string>^~I</string>
+
+	<key>name</key>
+	<string>Opsi Winst Script</string>
+
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>(^[ \t]+)?(?=#)</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.whitespace.comment.leading.ins</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>(?!\G)</string>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>#</string>
+
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.ins</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\n</string>
+
+					<key>name</key>
+					<string>comment.line.number-sign.ins</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(^[ \t]+)?(?=;)</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.whitespace.comment.leading.ins</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>(?!\G)</string>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>;</string>
+
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.ins</string>
+						</dict>
+					</dict>
+
+					<key>end</key>
+					<string>\n</string>
+
+					<key>name</key>
+					<string>comment.line.semicolon.ins</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>'</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.ins</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>'</string>
+
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.ins</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>string.quoted.single.ins</string>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.ins</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>"</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.ins</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>"</string>
+
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.ins</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>string.quoted.double.ins</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\$</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.variable.begin.ins</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>\$</string>
+
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.variable.end.ins</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>keyword.others.variable.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([Tt]rue|[Ff]alse|[Oo]n|[Oo]ff)\b</string>
+
+			<key>name</key>
+			<string>constant.language.boolean.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([0-9]+)\b</string>
+
+			<key>name</key>
+			<string>constant.numeric.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>!=|<=|>=|<>|=|<|></string>
+
+			<key>name</key>
+			<string>keyword.operator.comparison.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\[)(Initial|Actions|[Ss]ub\w+|ProfileActions)(\])</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.entity.ins</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.class.section.primary.ins</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.entity.ins</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\[)((WinBatch|DosBatch|DosInAnIcon|ShellBatch|ShellInAnIcon|ExecWith|Files|Registry|Patches|PatchTextFile|LinkFolder|OpsiServiceCall|PatchHosts|X[Mm][Ll]Patch|ExecPython|LdapSearch)\w+)(\])</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.entity.ins</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.class.section.secundary.ins</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.entity.ins</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(([Ss]ub|WinBatch|DosBatch|DosInAnIcon|ShellBatch|ShellInAnIcon|ExecWith|Files|Registry|Patches|PatchTextFile|LinkFolder|OpsiServiceCall|PatchHosts|X[Mm][Ll]Patch|ExecPython|LdapSearch)\w+)\b</string>
+
+			<key>name</key>
+			<string>entity.name.class.section.secundary.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(DefStringList|DefVar|Set|Add|Supp)\b</string>
+
+			<key>name</key>
+			<string>storage.type.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([Ii]f|[Ee]lse|[Ee]nd[Ii]f|[Ee]lse[Ii]f|[Ff]or|[Ss]et_[Ll]ink|[Oo]pen[Nn]ode[Ss]et|[Ee]nd_[Ll]ink|[Dd]o|[Ee]nd|[Ii]n|[Oo]r|[Aa]nd)\b</string>
+
+			<key>name</key>
+			<string>keyword.control.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(GetOS|getLinuxDistroType|GetMsVersionInfo|GetSystemType|GetRegistry[sS]tring[Vv]alue|GetRegistryStringValue32|GetRegistryStringValue64|GetRegistryStringValueSysNative|GetValueFromInifile|GetProductProperty|GetConfidentialProductProperty|[Tt]rim|[Ll]ower|[Uu]nquote|[Uunquote2]|[Ss]tringReplace|[Ss]trLength|[Ss]trPos|[Ss]trPart|[Gg]etValue|[Gg]etValueBySeparator|[Gg]etValueFromFile|[Gg]etValueFromFileBySeparator|[Gg]etLastExitCode|DemandLicenseKey|FreeLicense|GetUserSI[Dd]|GetLoggedInUser|GetUsercontext|GetScriptMode|[Ss]aveVersionToProfile|[Rr]eadVersionFromProfile|[Ss]criptWasExecutedBefore|GetHostsName|GetHostsAddr|ExtractFilePath|[Cc]alculate|DecStrToHexStr|HexStrToDecStr|[Bb]ase64EncodeStr|[Bb]ase64DecodeStr|[Cc]onvert2Json[Ss]tr|RandomStr|CompareDotSeparatedStrings|CompareDotSeparatedNumbers|EnvVar|ParamStr|[Gg]etDiffTimeSec|SidToName|GetMyIpByTarget|GetIpByName|[Rr]eencode[Ss]tr|[Ss]trLoadTextFile|[Ss]trLoadTextFileWithEncoding|GetShortWinPathName|GetNtVersion|IniVar|SubstringBefore|[Ss]plitString|[Ss]plitStringOnWhiteSpace|[Ll]oadTextFile|[Ll]oadUnicodeTextFile|[Ll]oadTextFileWithEncoding|[Cc]omposeString|[Tt]akeString|[Ss]etStringInListAtIndex|[Tt]akeFirstStringContaining|[Gg]etOutStreamFromSection|[Ss]hellCall|[Gg]etReturnListFromSection|[Gg]etListContaining|[Gg]etListContainingList|[Cc]ount|[Ee]mpty[Ll]ist|GetProcessList|[Gg]etProductPropertyList|[Gg]etRegistryKeyList32|[Gg]etRegistryKeyList64|[Gg]etRegistryKeyListSys[Nn]ative|[Gg]etRegistryVarList32|[Gg]etRegistryVarList64|[Gg]etRegistryVarListSys[Nn]ative|[Gg]etProfilesDirList|GetLocaleInfoMap|GetM[Ss]VersionMap|[Gg]etLinuxVersionMap|[Gg]etFileInfoMap|[Gg]etProductMap|[Gg]etRegistryVarMap32|[Gg]etRegistryVarMap64|[Gg]etRegistryVarMapSys[Nn]ative|[Gg]etH[Ww]BiosInfoMap|[Cc]reateStringList|[Rr]everse|[Gg]etSectionNames|[Rr]etrieveSection|[Gg]etSubList|[Aa]dd[Tt]o[Ll]ist|[Aa]ddListToList|[Rr]eencode[Ss]tr[Ll]ist|[Rr]emoveFromListByContaining|[Rr]emoveFromListByContaining|[Rr]emoveFromListByMatch|[Nn][Oo][Tt]|FileExists|FileExists32|FileExists64|FileExistsSysNative|LineExistsIn|LineBeginning_ExistsIn|LineContaining_ExistsIn|X[Mm][Ll]AddNamespace|X[Mm][Ll]RemoveNamespace|HasMinimumSpace|[Cc]ontains|[Ii]sNumber|[Ii]sDriveReady|[Ss]aveTextFile|CompareDotSeparatedNumbers|CompareDotSeparatedStrings|[Ll]oadUnicodeTextFile|Set_Mozilla_Pref|AddStringListElement_To_Mozilla_Pref|Set_Netscape_User_Pref|[Jj]sonIsValid|[Jj]sonIsArray|[Jj]sonIsObject|[Jj]sonAsObjectHasKey|[Jj]sonAsArrayCountElements|[Jj]sonAsObjectCountElements|[Jj]sonAsArrayGetElementByIndex|[Jj]sonAsObjectGetValueByKey|[Jj]sonAsObjectSetValueByKey|[Jj]sonAsObjectSetStringtypeValueByKey|[Jj]sonAsArrayPutObjectByIndex|[Jj]sonAsArrayToStringList|[Jj]sonAsObjectGetKeyList|[Jj]sonStringListToJsonArray|[Pp]rocessIsRunning|[Pp]rocessCall|[Ww]aitForPackageLock)\b</string>
+
+			<key>name</key>
+			<string>storage.type.function.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([Oo]psiLicenseManagementEnabled|[Rr]unningAsAdmin|[Ii]sLoginScript|[Rr]unningOnUefi|Kill[Tt]ask|[Rr]equiredWinstVersion|UpdateEnvironment|[Ss]ub|[Cc]opy|[Cc]heckTargetPath|[Dd]elete|[Dd]el|[Cc]hmod|[Hh]ard[Ll]ink|[Ss]ym[Ll]ink|[Rr]ename|[Mm]ove|OpenKey|GetMultiSZFromFile|SaveValueToFile|DeleteVar|DeleteKey|[Aa]dd[Nn]ew|[Cc]hange|[Dd]el[Ss]ec|[Rr]eplace|AddstringListElement_To_Netscape_User_Pref|FindLine|FindLine_StartingWith|FindLine_Containing|GoToTop|AdvanceLine|GoToBottom|DeleteTheLine|AddLine_|Add_Line_|InsertLine|Insert_Line_|AppendLine|Append_Line|Append_File|Subtract_File|SaveToFile|Sorted|[Ss]etKeyValueSeparator|[Ss]etValueByKey|[Ss]et_[Bb]ase[Ff]older|[Ss]et_[Ss]ub[Ff]older|[Dd]elete_[Ee]lement|[Dd]elete_[Ss]ub[Ff]older|[Ss]et[Aa]ddr|[Ss]et[Nn]ame|[Ss]et[Aa]lias|[Dd]el[Aa]lias|[Dd]el[Hh]ost|[Ss]etComment|[Gg]etLastServiceErrorClass|[Gg]etLastServiceErrorMessage|[Mm]arkTime|[Gg]etDiffTimeSec|[Tt]imeStampAsFloatStr|SetConfidential|[Mm]arkErrorNumber|[Ee]rrorsOccurredSinceMark)\b</string>
+
+			<key>name</key>
+			<string>keyword.other.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\%ProgramFiles64Dir\%|\%ProgramFilesDir\%|\%ProgramFiles32Dir\%|\%ProgramFilesSys[Nn]ativeDir\%|\%System[Rr]oot\%|\%System\%|\%System[Dd]rive\%|\%ProfileDir\%|\%AllUsersProfileDir\%|\%CommonProfileDir\%|\%CommonStartMenuPath\%|\%CommonStartmenuDir\%|\%CommonAppdataDir\%|\%CommonDesktopDir\%|\%CommonStartupDir\%|\%CommonProgramsDir\%|\%DefaultUserProfileDir\%|\%AppdataDir\%|\%CurrentAppdataDir\%|\%CurrentStartmenuDir\%|\%CurrentDesktopDir\%|\%CurrentStartupDir\%|\%CurrentProgramsDir\%|\%CurrentSendToDir\%|\%CurrentProfileDir\%|\%UserProfileDir\%|\%CurrentProfileDir\%|\%ScriptPath\%|\%ScriptDir\%|\%ScriptDrive\%|\%WinstDir\%|\%WinstVersion\%|\%Logfile\%|\%[Oo]psiScriptHelperPath\%|\%[Oo]psiTmpDir\%|\%[Oo]psiLogDir\%|\%Host\%|\%P[Cc]Name\%|\%User[Nn]ame\%|\%I[Pp]Name\%|\%I[Pp]Address\%|\%HostI[Dd]\%|\%[Oo]psiserviceU[Rr][Ll]\%|\%[Oo]psiServer\%|\%[Oo]psiDepotId\%|\%[Oo]psi[Ss]erviceUser\%|\%[Oo]psi[Ss]ervicePassword\%|\%[Ii]nstallingProdName\%|\%[Ii]nstallingProdVersion\%|\%[Ii]nstallingProduct\%)</string>
+
+			<key>name</key>
+			<string>entity.name.function.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([Ee]ncoding|LogLevel|SetLogLevel|ExitOnError|TraceMode|StayOnTop|ScriptErrorMessages|FatalOnSyntaxError|FatalOnRuntimeError|AutoActivityDisplay|Message|ShowMessageFile|ShowBitMap|[Cc]omment|[Ii]nclude[Ll]og|[Ii]nclude[Ll]og|Pause|Stop|[Ii]nclude_[Ii]nsert|[Ii]nclude_append|NormalizeWinst|IconizeWinst|MaximizeWinst|RestoreWinst|SetSkinDirectory)\b</string>
+
+			<key>name</key>
+			<string>keyword.control.host.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([Ii]sSuspended|[Nn]oUpdateScript|ExitWindows|[Ss]leepSeconds|ChangeDirectory)\b</string>
+
+			<key>name</key>
+			<string>keyword.control.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\/[\w\d]+\b</string>
+
+			<key>name</key>
+			<string>entity.name.function.ins</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([Ii]sFatalError|LogError)\b</string>
+
+			<key>name</key>
+			<string>error-token</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(LogWarning)\b</string>
+
+			<key>name</key>
+			<string>warn-token</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([Ii]sSuccess)\b</string>
+
+			<key>name</key>
+			<string>comment.line</string>
+		</dict>
+	</array>
+</dict>
+</plist>

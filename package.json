@@ -1,0 +1,46 @@
+{
+    "name": "winst",
+    "displayName": "Opsi Winst Script",
+    "description": "Syntax highlighting",
+    "version": "4.11.6",
+    "publisher": "Compilenix",
+    "author": {
+        "email": "Compilenix@gmail.com",
+        "name": "Compilenix",
+        "url": "https://compilenix.org/"
+    },
+    "license": "MIT",
+    "repository": {
+		"type": "git",
+		"url": "https://git.compilenix.org/Compilenix/vscode-winst"
+	},
+    "bugs": {
+		"url": "https://git.compilenix.org/Compilenix/vscode-winst/issues"
+	},
+    "icon": "images/opsi_logo.png",
+    "engines": {
+        "vscode": "^1.6.0"
+    },
+    "categories": [
+        "Languages",
+        "Other"
+    ],
+    "keywords": [
+        "opsi",
+        "winst",
+        "script"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ins",
+            "aliases": ["Opsi Winst Script"],
+            "extensions": [".ins", ".winst"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ins",
+            "scopeName": "source.ins",
+            "path": "./syntaxes/Ins.plist"
+        }]
+    }
+}

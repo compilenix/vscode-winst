@@ -1,0 +1,8 @@
+.vscode/**
+icon/**
+.gitignore
+.editorconfig
+*.vsix
+*.asc
+tsconfig.json
+vsc-extension-quickstart.md
