@@ -22,7 +22,7 @@
         "vscode": "^1.6.0"
     },
     "categories": [
-        "Languages",
+        "Programming Languages",
         "Other"
     ],
     "keywords": [
@@ -34,7 +34,7 @@
         "languages": [{
             "id": "ins",
             "aliases": ["Opsi Winst Script"],
-            "extensions": [".ins", ".winst"],
+            "extensions": [".ins", ".winst", ".opsiscript"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
