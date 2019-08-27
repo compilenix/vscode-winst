@@ -2,7 +2,7 @@
     "name": "winst",
     "displayName": "Opsi Winst Script",
     "description": "Syntax highlighting",
-    "version": "4.11.7",
+    "version": "4.11.8",
     "publisher": "Compilenix",
     "author": {
         "email": "Compilenix@gmail.com",
@@ -34,7 +34,7 @@
         "languages": [{
             "id": "ins",
             "aliases": ["Opsi Winst Script"],
-            "extensions": [".ins", ".winst", ".opsiscript"],
+            "extensions": [".ins", ".winst", ".opsiscript", ".opsiinc"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
